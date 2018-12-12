@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '8'
+dist: trusty
+sudo: false
+install:
+- npm install
+script:
+- npm run code-check
+- npm run test
+- npm run build
+deploy:
+  provider: npm
+  email: TrdelnikSquad@cimpress.com
+  skip_cleanup: true
+  api_key:
+    secure: i0guII2k6ck+f9YDjx8clhQ42WdNkloLfTrilkgSJavyfREjAxYH0Hwc7MnyoIsLxEEHK/Wn5ISCJFm1/cbc1LlWw55HKfm2LleGrGAF/EhTCQE1wdfO6uryR10ootOVnYphDS2gTQDUwTkNXmzk8zwuiHLY84GkFzlTFfr0FHvVmqeKq0b9UDS65GbRoOOPJ4zQtMSamIKlS9HdlvsC5MW5DhDnDSWo3bSNlRGT2x0n2d17YjnhwkEjKb7Zzj4QFVYyrjhwTq19t/MqxD6I+BLabXjlaU8kqW12OSSFiuZVvR7omITeIUfXQ5AxyjtnSIm1/Z+Pm44NjNnUbQrju6/1MwknrkodUaS10uUUn+8H5a9OKfWbMNu30AOaOYkdHYM2MlJt9XV5F8IjHv4u5xbBlrZelGUI3MpGrmZE1mFCpbciTuiQ+YB9go3LfhBTisTJD2jqeQGFtQOtVdaw9E0468g18ZKZJ+4dVdv8g58rSgOqfpiRUPlp8NT8c9KXobeZY5kgrBF64FyzdEOgzFpTZtoevCmt4yTBir3BArqeO4k2BNfhX8KDDZ2SwQARIcv15McIoQSFIRKA/qGnecgwao8VIaoirzTSr+puWuT61afSfp6I7VbdacW/uHFqptvzhkrG/VIxKW+EUMVopHOlZi8ZmQDp0fuxepBbzR0=
+  on:
+    tags: true
+    repo: Cimpress/cimpress-handlebars-helpers
