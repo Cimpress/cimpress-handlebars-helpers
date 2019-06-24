@@ -1,6 +1,6 @@
 {
   "name": "cimpress-handlebars-helpers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of simple handlebars helpers",
   "main": "./lib/index.js",
   "files": [
@@ -34,9 +34,9 @@
     "chai": "^4.1.2",
     "eslint": "^5.4.0",
     "eslint-config-google": "^0.9.1",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.1.2",
     "mocha": "^5.2.0",
-    "nyc": "^13.0.1"
+    "nyc": "^14.1.1"
   },
   "dependencies": {
     "lodash.flatmap": "^4.5.0",
