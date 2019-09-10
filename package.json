@@ -1,6 +1,6 @@
 {
   "name": "cimpress-handlebars-helpers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of simple handlebars helpers",
   "main": "./lib/index.js",
   "files": [
