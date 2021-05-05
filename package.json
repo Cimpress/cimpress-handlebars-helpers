@@ -1,16 +1,16 @@
 {
   "name": "cimpress-handlebars-helpers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A set of simple handlebars helpers",
   "main": "./lib/index.js",
   "files": [
     "lib"
   ],
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --compilers js:babel-core/register tests/",
+    "test": "node ./node_modules/mocha/bin/mocha --require @babel/polyfill --require @babel/register tests/",
     "code-check": "eslint --ext .js --ext .jsx src",
-    "cover": "node ./node_modules/nyc/bin/nyc.js ./node_modules/mocha/bin/mocha --require babel-core/register tests/",
-    "build": "node ./node_modules/babel-cli/bin/babel.js src -d lib --copy-files"
+    "cover": "node ./node_modules/nyc/bin/nyc.js ./node_modules/mocha/bin/mocha --require @babel/register tests/",
+    "build": "node ./node_modules/@babel/cli/bin/babel.js src -d lib --copy-files"
   },
   "author": "TrdelnikSquad@cimpress.com",
   "license": "MIT",
@@ -28,15 +28,17 @@
     "helpers"
   ],
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/register": "^7.13.16",
     "chai": "^4.1.2",
     "eslint": "^5.4.0",
     "eslint-config-google": "^0.9.1",
-    "handlebars": "^4.1.2",
-    "mocha": "^5.2.0",
-    "nyc": "^14.1.1"
+    "handlebars": "^4.7.7",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "lodash.flatmap": "^4.5.0",
