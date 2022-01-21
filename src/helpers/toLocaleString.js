@@ -1,4 +1,4 @@
-export const toLocaleStringHelper = (number, locales) => {
-    const numberFormatter = new Intl.NumberFormat(locales);
+export const toLocaleStringHelper = (number, locale) => {
+    const numberFormatter = new Intl.NumberFormat(locale);
     return numberFormatter.format(number);
 };

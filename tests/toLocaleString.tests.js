@@ -7,6 +7,7 @@ describe('convert number to Locale String', function() {
     before(() =>{
         handlebars.registerHelper('toLocaleString', toLocaleStringHelper);
     })
+    
     it('works as expected', function() {
         const fm = handlebars.compile('{{toLocaleString 12345 "de"}}');
         const result = fm();
