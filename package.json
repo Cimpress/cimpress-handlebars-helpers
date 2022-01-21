@@ -1,6 +1,6 @@
 {
   "name": "cimpress-handlebars-helpers",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A set of simple handlebars helpers",
   "main": "./lib/index.js",
   "files": [
@@ -41,6 +41,7 @@
     "nyc": "^15.1.0"
   },
   "dependencies": {
+    "lodash.divide": "^4.9.0",
     "lodash.flatmap": "^4.5.0",
     "lodash.get": "^4.4.2"
   }
